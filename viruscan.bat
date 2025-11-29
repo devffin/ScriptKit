@@ -8,7 +8,7 @@ echo.
 echo Updating the antivirus ...
 PowerShell -Command "Update-MpSignature"
 echo Scanning ...
-PowerShell -Command "Start-MpScan -ScanType FullScan"
+PowerShell -Command "Start-MpScan -ScanType QuickScan"
 echo Finished!
 PowerShell -Command "Get-MpThreatDetection"
 

@@ -1,0 +1,11 @@
+=== All apps versions ===
+
+CleanDisk 1.0.0
+CompactOS 1.0.0
+DefragDisk 1.0.0
+DelTempFiles 1.0.0
+DiskScan 1.0.0
+UpdateApps 1.0.0
+ViruScan 1.0.0
+
+InstallPS7 1.0.0

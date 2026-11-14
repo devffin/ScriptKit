@@ -9,3 +9,4 @@ UpdateApps 1.0.0
 ViruScan 1.0.0
 
 InstallPS7 1.1.0.770
+InstallFirefox 1.0.0.1600

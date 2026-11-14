@@ -23,6 +23,7 @@ cd %temp%
 curl -o ps7i.msi https://github.com/PowerShell/PowerShell/releases/download/v7.6.6/PowerShell-7.7.0-win-x64.msi
 msiexec /package ps7i.msi /quiet ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 ADD_FILE_CONTEXT_MENU_RUNPOWERSHELL=1 ENABLE_PSREMOTING=1 REGISTER_MANIFEST=1 USE_MU=1 ENABLE_MU=1 ADD_PATH=1
 if errorlevel 1 goto MSIX.InstallFailed
+del ps7i.msi
 goto End
 
 :End

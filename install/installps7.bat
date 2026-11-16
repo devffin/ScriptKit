@@ -16,13 +16,13 @@ if errorlevel 0 (
 echo Winget not found.
 goto MSIX.Install
 
-:MSIX.Install
-echo Trying with MSIX...
+:MSI.Install
+echo Trying with MSI... (version 7.6.6 is the last version to come with it)
 
 cd %temp%
-curl -o ps7i.msi https://github.com/PowerShell/PowerShell/releases/download/v7.6.6/PowerShell-7.7.0-win-x64.msi
+curl -o ps7i.msi https://github.com/PowerShell/PowerShell/releases/download/v7.6.6/PowerShell-7.6.6-win-x64.msi
 msiexec /package ps7i.msi /quiet ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 ADD_FILE_CONTEXT_MENU_RUNPOWERSHELL=1 ENABLE_PSREMOTING=1 REGISTER_MANIFEST=1 USE_MU=1 ENABLE_MU=1 ADD_PATH=1
-if errorlevel 1 goto MSIX.InstallFailed
+if errorlevel 1 goto MSI.InstallFailed
 del ps7i.msi
 goto End
 
@@ -49,10 +49,10 @@ echo =====================================================================
 set /p choice=
 
 if /i "%choice%"=="R" goto Wget.Install
-if /i "%choice%"=="I" goto MSIX.Install
+if /i "%choice%"=="I" goto MSI.Install
 goto Wget.InstallFailed
 
-:MSIX.InstallFailed
+:MSI.InstallFailed
 echo.
 echo =====================================================================
 echo = The installation via MSIX failed.                             (!) =

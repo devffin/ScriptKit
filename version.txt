@@ -11,3 +11,5 @@ ViruScan 1.0.0
 
 InstallPS7 1.2.0.770
 InstallFirefox 1.0.0.1600
+
+=== ScriptKit 0.1.11 ===
